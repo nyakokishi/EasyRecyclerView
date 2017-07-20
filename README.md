@@ -1,9 +1,38 @@
-EasyRecyclerView
+# EasyRecyclerView
 
-![](https://im2.ezgif.com/tmp/ezgif-2-b7f5cfaf16.gif)
-![](https://im2.ezgif.com/tmp/ezgif-2-766bf97f96.gif)
+![](art/ezgif-2-b198a93ca7.gif)
+![](art/ezgif-2-c7f0cab8fd.gif)
+![](art/ezgif-2-af1f3835d9.gif)
 
-![](https://im2.ezgif.com/tmp/ezgif-2-b198a93ca7.gif)
+## Install
+```
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+
+	dependencies {
+	        compile 'com.github.nyakokishi:EasyRecyclerView:1.0'
+	}
+
+```
+
+## Usage
+
+```
+<com.nyakokishi.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:footerLayout="@layout/view_loading"
+        />
+```
+
+```
+recyclerView.setLoadingListener {
+    loadMoreData()
+}
+```
+
 
 # License
 
