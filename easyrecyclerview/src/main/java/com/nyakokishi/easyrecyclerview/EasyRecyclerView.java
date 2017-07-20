@@ -37,6 +37,8 @@ public class EasyRecyclerView extends RecyclerView {
     private boolean isLoading = false;
     private boolean hasMore = true;
 
+    private boolean isDataObserverRegistered = false;
+
     private WrapAdapter mWrapAdapter;
 
     private LoadingListener mLoadingListener;
@@ -100,7 +102,10 @@ public class EasyRecyclerView extends RecyclerView {
     public void setAdapter(Adapter adapter) {
         mWrapAdapter = new WrapAdapter(adapter);
         super.setAdapter(mWrapAdapter);
-        adapter.registerAdapterDataObserver(mDataObserver);
+        if (!isDataObserverRegistered) {
+            adapter.registerAdapterDataObserver(mDataObserver);
+            isDataObserverRegistered = true;
+        }
         mDataObserver.onChanged();
     }
 
