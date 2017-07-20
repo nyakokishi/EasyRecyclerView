@@ -35,7 +35,7 @@ import java.util.List;
 public class EasyRecyclerView extends RecyclerView {
 
     private boolean isLoading = false;
-    private boolean hasMore = true;
+    private boolean hasMore = false;
 
     private boolean isDataObserverRegistered = false;
 
@@ -73,6 +73,7 @@ public class EasyRecyclerView extends RecyclerView {
      */
     public void setFootView(final View view) {
         mFooterView = view;
+        mFooterView.setVisibility(View.GONE);
     }
 
     /**
