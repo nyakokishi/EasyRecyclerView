@@ -11,7 +11,7 @@
     }
 
 	dependencies {
-	        compile 'com.github.nyakokishi:EasyRecyclerView:1.0'
+	        compile 'com.github.nyakokishi:EasyRecyclerView:1.1'
 	}
 
 ```
